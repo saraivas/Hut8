@@ -37,4 +37,4 @@ function categoria(idade){
     }
 }
 
-categoria(4)
+categoria(18)
