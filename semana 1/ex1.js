@@ -20,8 +20,3 @@ let estudante = {nome:'Felipe',
 
 console.log(`Nome Completo: ${estudante.nome} ${estudante.sobrenome}\nIdade: ${estudante.idade}\nData de Nascimento: ${estudante.diaNascimento}/${estudante.mesNascimento}/${estudante.anoNascimento}\nMédia: ${(estudante.notas[0]+estudante.notas[1])/2}`)
 
-/*2 - Crie um programa que some os números 5, 10 e 15. Salve o resultado em umavariável e imprima no console.*/
-let numeros = [5, 10, 15];
-let soma = 0;
-soma = numeros[0]+numeros[1]+numeros[2];
-console.log('\n'+soma)
