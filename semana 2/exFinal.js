@@ -48,4 +48,50 @@ function contarPalavras(frase) {
 
 contarPalavras(frase)
 
-/*Falta 5 e 6*/
+/*5.Através do array de usuários abaixo imprima no console todas a skills que cada usuario tem:*/
+
+const users = [
+    {
+        name: "Joao",
+        skills: ["Javascript", "ReactJS", "Redux"]
+    },
+    {
+        name: "Pedro",
+        skills: ["VueJS", "Ruby on Rails", "Elixir"]
+    }
+]
+
+for (let i = 0; i < users.length; i++) {
+    console.log('\n'+users[i].name+' sabe: ')
+    for (let j = 0; j < users[[i]].skills.length; j++) {
+        console.log('\t\t'+users[i].skills[j])
+    }    
+}
+
+/*6.Crie uma função chamada rockPaperScissorsWinner e recebe dois valores como parâmetro.
+ Esses dois valores podem ser:
+    ●0: tesoura
+    ●1: papel
+    ●2: pedra
+Construa um algoritmo que recebe esses valores randomicamente e printa na telaqual usuário ganhou, se o usuário 1 ou usuário 2*/
+
+let jogador1 = Math.floor(Math.random() * 3)
+let jogador2 = Math.floor(Math.random() * 3)
+
+function rockPaperScissorsWinner(valor1, valor2){
+    let param = ['✌🏻', '✋🏻', '✊🏻'];
+    jogador1 = param[valor1]
+    jogador2 = param[valor2]
+
+    if (valor1 == valor2){
+        console.log(jogador1+' X '+jogador2)
+        console.log("Empate! Ninguém ganhou.")
+    }else if ((valor2 - valor1 == -2) || (valor2 - valor1 == 1)){
+        console.log(jogador1+' X '+jogador2)
+        console.log("Jogador 1 ganhou.")
+    }else{
+        console.log(jogador1+' X '+jogador2)
+        console.log("Jogador 2 ganhou.") }
+}
+
+rockPaperScissorsWinner(jogador1, jogador2)
